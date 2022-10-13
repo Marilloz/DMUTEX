@@ -1,0 +1,15 @@
+A: EVENT
+B: EVENT
+C: LOCK SEM
+C: GETCLOCK
+A: LOCK SEM
+# Por prioridad de PID entraría A                               
+C: RECEIVE
+A: RECEIVE
+A: RECEIVE
+# B Responde OK a A y C                                      
+B: RECEIVE
+B: RECEIVE
+A: RECEIVE
+C: RECEIVE
+# A obtiene el semaforo                                      
